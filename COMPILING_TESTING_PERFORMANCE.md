@@ -13,7 +13,7 @@ MKLROOT="${INTELROOT}/mkl"
 . ${MKLROOT}/bin/mklvars.sh intel64 lp64
 ```
 
-
+Command to compile:
 ```shell
 gcc -o senna -O3 -ffast-math *.c -DUSE_MKL_BLAS -I${INTELROOT}/compilers_and_libraries/linux/mkl/include -L${MKLROOT}/lib/intel64 -Wl,--no-as-needed -lm -lmkl_intel_lp64 -lmkl_sequential -lmkl_core -pthread
 ```
@@ -66,14 +66,14 @@ user	1m49.252s
 sys	0m19.484s
 ```
 
-__Simples c/ OpenBlas__
+__Simple with OpenBlas__
 ```shell
 real	2m17.415s
 user	2m17.208s
 sys	0m0.196s
 ```
 
-__Simples c/ Blas__
+__Simple with Blas__
 ```shell
 real	2m19.058s
 user	2m18.968s

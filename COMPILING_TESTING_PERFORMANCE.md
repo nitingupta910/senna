@@ -33,7 +33,7 @@ And then compile with:
 gcc -o senna -O3 -ffast-math *.c -DUSE_ATLAS_BLAS /usr/lib/atlas-base/atlas/*
 ```
 
-## Simples
+## Simple
 ```shell
 gcc -o senna -O3 -ffast-math *.c
 ```

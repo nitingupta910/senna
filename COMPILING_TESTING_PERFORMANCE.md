@@ -15,11 +15,11 @@ MKLROOT="${INTELROOT}/mkl"
 
 Command to compile:
 ```shell
-gcc -o senna -O3 -ffast-math *.c -DUSE_MKL_BLAS -I${INTELROOT}/compilers_and_libraries/linux/mkl/include -L${MKLROOT}/lib/intel64 -Wl,--no-as-needed -lm -lmkl_intel_lp64 -lmkl_sequential -lmkl_core -pthread
+gcc -o senna -O3 -ffast-math *.c -DUSE_MKL_BLAS -I${MKLROOT}/include -L${MKLROOT}/lib/intel64 -Wl,--no-as-needed -lm -lmkl_intel_lp64 -lmkl_sequential -lmkl_core -pthread
 ```
 or
 ```shell
-gcc -o senna -O3 -ffast-math *.c -DUSE_MKL_BLAS -I/opt/intel/compilers_and_libraries/linux/mkl/include -L/opt/intel/mkl/lib/intel64 -Wl,--no-as-needed -lm -lmkl_intel_lp64 -lmkl_sequential -lmkl_core -pthread
+gcc -o senna -O3 -ffast-math *.c -DUSE_MKL_BLAS -I/opt/intel/mkl/include -L/opt/intel/mkl/lib/intel64 -Wl,--no-as-needed -lm -lmkl_intel_lp64 -lmkl_sequential -lmkl_core -pthread
 ```
 
 ## ATLAS

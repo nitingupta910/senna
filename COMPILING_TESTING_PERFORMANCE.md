@@ -6,10 +6,11 @@ COMPILING
 First, Intel MKL must be installed, and the following variables must be defined in the file `/etc/profile.d/intel.sh`:
 ```shell
 # setting up Intel environment vars
-INTELROOT="/opt/intel"
-MKLROOT="${INTELROOT}/mkl"
+export INTELROOT="/opt/intel"
+export MKLROOT="${INTELROOT}/mkl"
 
-# setting up MKL environment for sh
+# setting up Compilers and MKL environment for sh
+. ${INTELROOT}/bin/compilervars.sh intel64
 . ${MKLROOT}/bin/mklvars.sh intel64 lp64
 ```
 

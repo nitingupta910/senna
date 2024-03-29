@@ -35,6 +35,8 @@ SENNA also compiles with ATLAS BLAS. On our platform, the handcrafted code compi
 
 gcc -o senna -O3 -ffast-math *.c -DUSE_ATLAS_BLAS [...]
 
+__This [link](COMPILING_TESTING_PERFORMANCE.md) provides more details on how to compile, test, and even compare performance against the library used in the build.__
+
 Mac OS X
 ========
 

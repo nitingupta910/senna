@@ -25,9 +25,8 @@ SENNA_Hash* SENNA_Hash_new(const char *path, const char *filename)
   n_keys = 0;
   while(fgets(key, MAX_KEY_SIZE, f))
   {
-    int key_size = strlen(key);
-    key[key_size-1] = '\0'; /* discard the newline */
-    keys[n_keys] = SENNA_malloc(key_size, sizeof(char));
+    SENNA_trim(key); /* discard newline characters */
+    keys[n_keys] = SENNA_malloc(strlen(key) + 1, sizeof(char));
     strcpy(keys[n_keys], key);
     n_keys++;
   }

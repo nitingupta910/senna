@@ -5,6 +5,7 @@
 #include <stdlib.h>
 #include <stdarg.h>
 #include <string.h>
+#include <ctype.h>
 
 /* messaging */
 void SENNA_error(const char *fmt, ...);
@@ -29,5 +30,8 @@ void SENNA_free(void *ptr);
 /* debug */
 void SENNA_print_tensor_1d(float *tensor, int nrow);
 void SENNA_print_tensor_2d(float *tensor, int nrow, int ncolumn);
+
+/* string */
+char* SENNA_trim(char *str);
 
 #endif

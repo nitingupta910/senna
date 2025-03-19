@@ -220,3 +220,31 @@ void SENNA_print_tensor_2d(float *tensor, int nrow, int ncolumn)
   }
   printf("[Tensor of size %dx%d]\n", nrow, ncolumn);
 }
+
+char* SENNA_trim(char *str){
+  size_t countSpaces;
+  size_t i;
+
+  // Count spaces
+  for (countSpaces = 0; isspace(str[countSpaces]); countSpaces++);
+
+  // All spaces?
+  if(countSpaces == strlen(str)) {
+      str[0] = '\0';
+      return str;
+  }
+
+  // Trim leading space
+  for (i = countSpaces; str[i] != '\0'; i++) {
+      str[i - countSpaces] = str[i];
+  }
+  str[i - countSpaces] = '\0';
+
+  // Trim trailing space
+  for (i = strlen(str) - 1; i > 0 && isspace(str[i]); i--);
+  
+  // Write new null terminator character
+  str[i + 1] = '\0';
+
+  return str;
+}
